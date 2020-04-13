@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<title>p5.js template | index</title>
+
+	<!-- load style sheets -->
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/landing.css">
+
+
+</head>
+
+<body>
+	<div class='container'>
+		<header>
+			<ul class='menu'>
+				<li><a href='./index.html'>index</a></li>
+				<li><a href='./fullscreen.html'>fullscreen</a></li>
+				<li><a href='./process.html'>process</a></li>
+				<li><a href='./gallery.html'>gallery</a></li>
+				<li><a href='./video.html'>video</a></li>
+			</ul>
+		</header>
+
+		<div id="landing">
+			<div class="overlay">
+				<h2>FOR ONCE</h2>
+			</div>
+			<span id="down">&#8595;</span>
+		</div>
+		<div id="project-info">
+			<h2>Project Description</h2>
+			<p>For Once is an audio-visual project that focuses on producing a music video using only the P5JS web editor. A big part of the focus in this project was to integrate the use of a MIDI controller. Therefore, the codes were programmed in a way that I was able to use my MIDI controller to have more control over how the visuals would react to the music over time. The music was composed by myself and I wanted to create a track that helps one to focus, which is also why visually, this project is minimal and repetitive. The intention of keeping it raw and minimal, in my opinion, helps to evoke the calmness and mindfulness that I wanted to achieve. As someone who is new to the visual field, this project has sparked new interest in me, and I look forward to continuing my explorations in aesthetic visuals. 
+</p>
+			<p>Have a look at my <a href="https://skindutezzzp5js.tumblr.com/" target="_blank">process log</a>, my <a href="https://editor.p5js.org/skindutezzz/sketches" target="_blank">p5js sketches!</a>
+			</p>
+			<p>My name is Nysah and I am a percussionist and an aspiring sound designer studying in Lasalle College of the Arts. In all honesty, I have never done or worked with visuals prior to this project. However, thanks to this project, I find myself interested to continue venturing out in this field of work in time to come, on top of music which I am currently active in. </p>
+		</div>
+	</div>
+
+	<footer>
+		<p>A project by Nysah Tan.<br />2020</p>
+	</footer>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		window.onbeforeunload = function() {
+			window.scrollTo(0, 0);
+		}
+
+		$(document).ready(function() {
+			$('#down').on('click', function() {
+				$("html").scrollTop(0);
+				$('html, body').animate({
+					scrollTop: $("#project-info").offset().top
+				}, 1000);
+			});
+		});
+	</script>
+</body></html>
